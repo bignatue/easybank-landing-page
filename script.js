@@ -1,0 +1,9 @@
+$(document).ready(function(){
+  $("#hamburger").click(function(){
+      $("ul.fast").toggle();
+      $("li.fast").toggle("fast");
+      $("li.slow").toggle("slow");
+      $("li.very-fast").toggle(50);
+      $("li.very-slow").toggle(2000);
+  });
+});

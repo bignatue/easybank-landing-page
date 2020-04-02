@@ -1,0 +1,331 @@
+/*
+Theme Name: Easy Bank
+Theme URI: https://bpbantigue.com/projects/easybank/
+Author: the Easy Bank Landing Page
+Author URI: https://bpbantigue.com/
+Description: HTML CSS landing page code challenge
+Version: 1.0
+License: MIT
+License URI: https://bpbantigue.com/
+Text Domain: bpbantigue
+Tag: easybank, web template
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap');
+
+/** colors **/
+:root {
+  /** Primary **/
+  --dark-blue: hsl(233, 26%, 24%);
+  --lime-green: hsl(136, 65%, 51%);
+  --bright-cyan: hsl(192, 70%, 51%);
+  --lime-light-green: hsl(136, 65%, 80%);
+  --light-cyan: hsl(192, 70%, 80%);
+  /** Neutral **/
+  --grayish-blue: hsl(233, 8%, 62%);
+  --light-grayish-blue: hsl(220, 16%, 96%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+  font-family: 'Public Sans', sans-serif;
+  color: var(--grayish-blue);
+}
+
+a {
+  text-decoration: none;
+  color: var(--grayish-blue);
+}
+
+img {
+  width: 100%;
+}
+
+button{
+  padding: 12px 30px;
+  border-radius: 50px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  background-image: linear-gradient(to right,var(--lime-green), var(--bright-cyan));
+}
+button:hover {
+  background-image: linear-gradient(to right,var(--lime-light-green), var(--light-cyan));
+}
+
+/** headings **/
+h1, h2, h3 {
+  color: var(--dark-blue);
+  font-weight: 200;
+}
+
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.3em;
+  font-weight: 400;
+}
+
+/** nav **/
+header {
+  background-color: var(--white);
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  padding-bottom: 13px;
+}
+header .container {
+  padding-bottom: 0;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+nav ul li {
+  padding: 0 20px;
+}
+nav ul li a{
+  padding: 20px 0;
+  border-bottom: 2px solid var(--white);
+}
+nav ul li a:hover{
+  border-bottom: 3px solid var(--bright-cyan);
+}
+
+nav #hamburger {
+  display: none;
+}
+
+img.logo {
+  max-width: 160px;
+}
+
+.container {
+  padding: 20px 25px;
+  margin:  0 auto;
+  width: 1200px;
+  max-width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+#features {
+  width: 100%;
+}
+#features::before {
+  content: '';
+  background-image: url(img/bg-intro-desktop.svg);
+  background-size: cover;
+  background-position: top right;
+  position: absolute;
+  right: -20%;
+  top: -15%;
+  height: 100%;
+  width: 60%; 
+}
+.features {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  padding: 5rem 0;
+}
+
+/** features **/
+.features p{
+  margin-bottom: 30px;
+}
+
+.features > div:first-child {
+  flex: .8;
+  margin-right: 50px;
+}
+.features > div:last-child {
+  flex: 1.2;
+  position: relative;
+}
+
+.features > div:last-child img {
+  margin-top: -30%;; 
+  z-index: -8;  
+}
+
+/** services **/
+section.services {
+  background-color: var(--light-grayish-blue);
+  padding: 5rem 0;
+}
+section.services > .container > div > p {
+  margin-bottom: 4rem;
+  max-width: 50%;
+}
+.card-wrapper {
+  display: flex;
+}
+.card-wrapper .card {
+  flex: 1;
+  margin-right: 25px;
+}
+.card-wrapper .card:last-child {
+  margin-right: 0;
+}
+.card-wrapper p {
+  font-weight: 100;
+}
+.card-wrapper .card img {
+  max-width: 60px;
+}
+
+/** latest-article **/
+section.latest-article {
+  padding: 5rem 0;
+}
+section .latest-article-wrapper {
+  display: flex;
+}
+section .latest-article-wrapper .article {
+  margin-right: 20px;
+}
+section .latest-article-wrapper .article:last-child {
+  margin-right: 0
+}
+section .latest-article-wrapper img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px; 
+  max-height: 9vw;
+}
+section .latest-article-wrapper .content{
+  padding: 10px;
+}
+section .latest-article-wrapper h4 {
+  margin-bottom: 10px;
+}
+section .latest-article-wrapper h4 a{
+  color: var(--dark-blue);
+  font-weight: 200;
+  font-size: 1.1em;
+}
+section .latest-article-wrapper h4 a:hover{
+  color: var(--light-cyan);
+}
+
+/** footer **/
+footer {
+  background-color: var(--dark-blue);
+  padding: 3rem;
+  font-size: .8rem;
+}
+footer .footer {
+  display: flex;
+}
+footer .footer .logo {
+  margin-bottom: 2rem;
+}
+footer .footer div, footer .footer ul{
+  flex: 1;
+}
+footer ul {
+  margin: 0;
+  padding: 0;
+}
+footer ul li {
+  list-style: none;
+  margin-bottom: 1.2rem;
+}
+footer ul li a {
+  color: var(--light-grayish-blue);
+}
+footer ul li img {
+  max-width: 25px;
+}
+
+footer ul li {
+  margin-right:15px;
+}
+footer form, footer p {
+  text-align: right;
+  margin-bottom: 1.5rem;
+}
+
+/** mobile styling **/
+@media screen and (max-width: 768px) {
+  body {
+    text-align: center;
+  }
+  nav form {
+    display: none;
+  }
+  nav #hamburger {
+    display: block;
+    max-width: 40px;
+  }
+  nav #hamburger-menu {
+    background-color: var(--white);
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    padding: 20px 0;
+    margin: 16% 5%;
+    flex-flow: column; 
+  }
+  nav #hamburger-menu li{
+    padding: 10px 0;
+
+  }
+  nav ul li a:hover{
+    border-bottom: 3px solid var(--white);
+  }
+  #features::before {
+    content: '';
+    background-image: url(img/bg-intro-mobile.svg);background-size: cover;
+    background-position: center center;
+    position: absolute;
+    left: 0;
+    height: 70%;
+    width: 100%;
+
+  }
+  .features {
+    flex-direction: column-reverse;
+  }
+  .features > div:first-child {
+    margin: 0;
+  }
+  section.services > .container > div > p {
+    max-width: 100%;
+  }
+  .card-wrapper, section .latest-article-wrapper, footer .footer {
+    flex-flow: column;
+  }
+  section .latest-article-wrapper .article {
+    margin-bottom: 30px;
+  }
+  section .latest-article-wrapper img {
+    max-height: 50vw;
+  }
+  footer .footer ul, 
+  footer form, footer p {
+    text-align: center;
+    justify-content: center;
+  }
+}
