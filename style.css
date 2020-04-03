@@ -82,7 +82,7 @@ h3 {
 header {
   background-color: var(--white);
   width: 100%;
-  z-index: 1;
+  z-index: 3;
   position: relative;
   padding-bottom: 13px;
 }
@@ -131,22 +131,25 @@ img.logo {
 }
 #features {
   width: 100%;
+  padding: 5rem 0;
 }
 #features::before {
   content: '';
   background-image: url(img/bg-intro-desktop.svg);
-  background-size: cover;
+  background-size: 50% 60%;
   background-position: top right;
   position: absolute;
-  right: -20%;
-  top: -15%;
+  background-repeat: no-repeat;
+  right: -15%;
+  top: -8%;
   height: 100%;
-  width: 60%; 
+  width: 100%;
+  z-index: 0.5;
 }
 .features {
   display: flex;
   flex-wrap: wrap-reverse;
-  padding: 5rem 0;
+  margin-bottom: 5rem;
 }
 
 /** features **/
@@ -164,8 +167,9 @@ img.logo {
 }
 
 .features > div:last-child img {
-  margin-top: -30%;; 
-  z-index: -8;  
+  margin-top: -30%;
+  position: absolute;
+  z-index: 1;
 }
 
 /** services **/
@@ -295,6 +299,10 @@ footer form, footer p {
   }
   nav ul li a:hover{
     border-bottom: 3px solid var(--white);
+  }
+  .features > div:last-child img {
+    position: relative;
+    margin-top: -55%;
   }
   #features::before {
     content: '';
