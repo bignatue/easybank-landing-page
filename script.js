@@ -1,9 +1,8 @@
-$(document).ready(function(){
-  $("#hamburger").click(function(){
-      $("ul.fast").toggle();
-      $("li.fast").toggle("fast");
-      $("li.slow").toggle("slow");
-      $("li.very-fast").toggle(50);
-      $("li.very-slow").toggle(2000);
-  });
-});
+function mobileNav() {
+  var x = document.getElementById("hamburger-menu");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
